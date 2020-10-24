@@ -23,13 +23,13 @@ def listsCapital(a1, a2):
 
 
 def dictionary(a1, a2):
-    d = {}
+    h = {}
     for i in range(0, len(a1)):
         for j in range(0, len(a2)):
             if(i == j):
                 a = {a1[i]: a2[j]}
-                d.update(a)
-    return d
+                h.update(a)
+    return h
 
 
 print(lists(List1, List2))
