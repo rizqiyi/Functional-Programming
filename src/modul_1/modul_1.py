@@ -18,11 +18,7 @@ for i in range(0, len(numbers)):
 
 
 # Kegiatan 2
-
 def odd_numbers(x): return x % 2 == 1
-
-
-def isEvenNumber(number): return number % 2 = 0
 
 
 def prime_numbers(x):
