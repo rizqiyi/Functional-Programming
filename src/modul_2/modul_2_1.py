@@ -1,24 +1,25 @@
 # Map
-def lists(x):
-    return x * x
-
-
 b = [1, 4, 9]
 
-z = []
+# method biasa
 
-for i in b:
-    z.append(lists(i))
+
+def biasa(x):
+    b = []
+    for i in range(0, len(x)):
+        b.append(x[i] * x[i])
+    return b
+
 
 # Print biasa
-print(z)
+print(biasa(b))
 
-x = map(lists, b)
 # print pake map
+x = map(lambda x: x*x, b)
 print(list(x))
 
-# Filter
 
+# Filter
 a = [1, 2, 3, 4]
 
 
@@ -30,9 +31,9 @@ def listb(x):
     return b
 
 
+# filter biasa
 print(listb(a))
 
-
+# print pake filter
 g = filter(lambda x: x % 2 == 0, a)
-
 print(list(g))
