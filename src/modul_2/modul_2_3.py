@@ -6,7 +6,7 @@ def inputValues(rows, columns):
     for i in range(rows):
         a = []
         for j in range(columns):
-            a.append(int(input(f'[{i}][{j}] :')))
+            a.append(int(input(f'[{i}][{j}] : ')))
         result.append(a)
     return tuple(result)
 
