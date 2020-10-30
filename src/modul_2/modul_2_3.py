@@ -7,63 +7,63 @@ def inputValues(rows, columns):
         a = []
         for j in range(columns):
             a.append(int(input(f'[{i}][{j}] : ')))
-        result.append(a)
+        result.append(tuple(a))
     return tuple(result)
 
 
 def square(val):
-    a = []
+    row = []
     for x in range(0, len(val)):
-        b = []
+        column = []
         for z in range(0, len(val[x])):
             square = val[x][z] * val[x][z]
-            b.append(square)
-        a.append(b)
-    return tuple(a)
+            column.append(square)
+        row.append(tuple(column))
+    return tuple(row)
 
 
 def addition(val):
-    a = []
+    row = []
     for x in range(0, len(val)):
-        b = []
+        column = []
         for z in range(0, len(val[x])):
             resultAdd = val[x][z] + val[x][z]
-            b.append(resultAdd)
-        a.append(b)
-    return tuple(a)
+            column.append(resultAdd)
+        row.append(tuple(column))
+    return tuple(row)
 
 
 def reduction(val):
-    a = []
+    row = []
     for x in range(0, len(val)):
-        b = []
+        column = []
         for z in range(0, len(val[x])):
             resultReduction = val[x - 1][z - 1] - val[x][z]
-            b.append(resultReduction)
-        a.append(b)
-    return tuple(a)
+            column.append(resultReduction)
+        row.append(tuple(column))
+    return tuple(row)
 
 
 def multiply(val):
-    a = []
+    row = []
     for x in range(0, len(val)):
-        b = []
+        column = []
         for z in range(0, len(val[x])):
             resultMult = val[x - 1][z - 1] * val[x][z]
-            b.append(resultMult)
-        a.append(b)
-    return tuple(a)
+            column.append(resultMult)
+        row.append(tuple(column))
+    return tuple(row)
 
 
 def division(val):
-    a = []
+    row = []
     for x in range(0, len(val)):
-        b = []
+        column = []
         for z in range(0, len(val[x])):
             resultDiv = val[x - 1][z - 1] / val[x][z]
-            b.append(round(resultDiv, 2))
-        a.append(b)
-    return tuple(a)
+            column.append(round(resultDiv, 2))
+        row.append(tuple(column))
+    return tuple(row)
 
 
 rows = int(input("Masukkan jumlah baris : "))
