@@ -6,7 +6,7 @@ listOfDict = [
     {"barang": "monitor", "jumlah": 10, "kualitas": "baru", "harga": 1500000},
 ]
 
-# Jika nomor 1 dijalankan maka akan ada error di beberapa line, kalo ga pake command aja
+# Jika nomor 1 dijalankan maka akan ada error di beberapa line, kalo ga pake comment aja
 # karena tidak menambahkan key (sudah di-pop duluan di nomor 1)
 # Nomor 1
 
@@ -47,7 +47,7 @@ def printAllKeysAndValues(val, keys):
         print("-----")
 
 
-# printAllKeysAndValues(listOfDict, getDictKeys(listOfDict))
+printAllKeysAndValues(listOfDict, getDictKeys(listOfDict))
 
 
 # Nomor 4
