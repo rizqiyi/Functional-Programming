@@ -41,10 +41,10 @@ def getDictKeys(val):
 
 def printAllKeysAndValues(val, keys):
     for i in range(0, len(val)):
+        print("-----")
         for j in range(0, len(val[i])):
             print(
-                f'{str(keys[j]).capitalize()} :  {"Rp. " + "{:,}".format(val[i].get(keys[j])) if keys[j] == "harga" else val[i].get(keys[j])}')
-        print("-----")
+                f'{keys[j].capitalize()} :  {"Rp. " + "{:,}".format(val[i].get(keys[j])) if keys[j] == "harga" else val[i].get(keys[j])}')
 
 
 printAllKeysAndValues(listOfDict, getDictKeys(listOfDict))
@@ -66,20 +66,18 @@ def insertNewValues(val, keys, root):
 print(
     f'\nNomor 4\n{insertNewValues(newValues, getDictKeys(listOfDict), listOfDict)}\n')
 
-# printAllKeysAndValues(listOfDict, getDictKeys(listOfDict))
-# print("\n")
 # Nomor 5
 listUpdateValues = [1000, 1000, 1000, 1000, 1000]
 
 
-def updateLastValues(updateVal, root):
+def updatePrice(updateVal, root):
     for i in range(0, len(root)):
         root[i].update({"harga": updateVal[i]})
     return root
 
 
 print(
-    f'Nomor 5\n{updateLastValues(listUpdateValues, listOfDict)}\n')
+    f'Nomor 5\n{updatePrice(listUpdateValues, listOfDict)}\n')
 
 # Nomor 6
 print("Nomor 6")
