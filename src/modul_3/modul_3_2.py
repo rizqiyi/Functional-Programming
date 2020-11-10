@@ -11,17 +11,16 @@ data = ["nama", "jurusan", "semester", "angkatan"]
 
 def inputValues(rows, keys):
     for i in range(0, len(rows)):
-        b = []
         for j in range(0, len(keys)):
             if(rows[i].get(keys[j]) == ""):
                 if(keys[j] == "semester" or keys[j] == "angkatan"):
-                    b = int(
+                    integerValues = int(
                         input(f'Key [{j + 1}] Value [{i + 1}] ({str(keys[j]).capitalize()}) : '))
-                    rows[i].update({keys[j]: b})
+                    rows[i].update({keys[j]: integerValues})
                 else:
-                    c = input(
+                    stringValues = input(
                         f'Key [{j + 1}] Value [{i + 1}] ({keys[j].capitalize()}) : ')
-                    rows[i].update({keys[j]: c})
+                    rows[i].update({keys[j]: stringValues})
     return rows
 
 
