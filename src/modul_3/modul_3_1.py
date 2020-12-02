@@ -6,8 +6,6 @@ listOfDict = [
     {"barang": "monitor", "jumlah": 10, "kualitas": "baru", "harga": 1500000},
 ]
 
-# Jika nomor 1 dijalankan maka akan ada error di beberapa line, kalo ga pake comment aja
-# karena tidak menambahkan key (sudah di-pop duluan di nomor 1)
 # Nomor 1
 
 # def printSpesificKeys(val):
@@ -34,9 +32,8 @@ print(f'Nomor 2 \n{listOfDict}\n')
 print("Nomor 3")
 
 
-def getDictKeys(val):
-    for i in range(0, len(val)):
-        return list(val[i].keys())
+def getDictKeys(val, idx):
+    return list(val[idx].keys())
 
 
 def printAllKeysAndValues(val, keys):
@@ -46,8 +43,8 @@ def printAllKeysAndValues(val, keys):
             print(
                 f'{keys[j].capitalize()} :  {"Rp. " + "{:,}".format(val[i].get(keys[j])) if keys[j] == "harga" else val[i].get(keys[j])}')
 
-
-printAllKeysAndValues(listOfDict, getDictKeys(listOfDict))
+print(getDictKeys(listOfDict, 1))
+printAllKeysAndValues(listOfDict, getDictKeys(listOfDict, 1))
 
 
 # Nomor 4
@@ -64,7 +61,7 @@ def insertNewValues(val, keys, root):
 
 
 print(
-    f'\nNomor 4\n{insertNewValues(newValues, getDictKeys(listOfDict), listOfDict)}\n')
+    f'\nNomor 4\n{insertNewValues(newValues, getDictKeys(listOfDict, 1), listOfDict)}\n')
 
 # Nomor 5
 listUpdateValues = [1000, 1000, 1000, 1000, 1000]
@@ -81,7 +78,7 @@ print(
 
 # Nomor 6
 print("Nomor 6")
-printAllKeysAndValues(listOfDict, getDictKeys(listOfDict))
+printAllKeysAndValues(listOfDict, getDictKeys(listOfDict, 1))
 
 # Nomor 7
 spesificValues = ["jumlah", "harga", "kualitas"]
@@ -89,18 +86,18 @@ spesificKey = [0, 1, 3]
 newValues2 = [100, 2000000, "original"]
 
 
-def updateSpesificValues(newValues, root, keys, rows):
+def updateSpesificValues(newValues, root, rows, keys):
     for i in range(0, len(keys)):
         root[keys[i]].update({rows[i]: newValues[i]})
     return root
 
 
 print(
-    f'Nomor 7\n{updateSpesificValues(newValues2, listOfDict, spesificKey, spesificValues)}')
+    f'Nomor 7\n{updateSpesificValues(newValues2, listOfDict, spesificValues, spesificKey)}')
 
 # Nomor 8
 print("\nNomor 8")
-printAllKeysAndValues(listOfDict, getDictKeys(listOfDict))
+printAllKeysAndValues(listOfDict, getDictKeys(listOfDict, 1))
 
 # Nomor 9
 
