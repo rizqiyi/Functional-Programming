@@ -16,14 +16,14 @@ data = [
 ]
 
 
-def wrapper(firstParams):
-    def phone(*number):
+def a(firstParams):
+    def b(*number):
         firstParams(*number)
-    return phone
+    return b
 
 
-@wrapper
-def sort(number):
+@a
+def c(number):
     temp = []
 
     t = sorted(number, key=itemgetter('usia'))
@@ -37,4 +37,4 @@ def sort(number):
     print(*temp[0:3], sep="\n")
 
 
-sort(data)
+c(data)
