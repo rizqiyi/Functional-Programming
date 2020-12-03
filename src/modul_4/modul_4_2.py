@@ -16,14 +16,14 @@ data = [
 ]
 
 
-def a(firstParams):
-    def b(*number):
+def firstFunc(firstParams):
+    def innerFunc(*number):
         firstParams(*number)
-    return b
+    return innerFunc
 
 
-@a
-def c(number):
+@firstFunc
+def sortedFunc(number):
     temp = []
 
     t = sorted(number, key=itemgetter('usia'))
@@ -37,4 +37,4 @@ def c(number):
     print(*temp[0:3], sep="\n")
 
 
-c(data)
+sortedFunc(data)
